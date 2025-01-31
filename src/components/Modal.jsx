@@ -15,10 +15,10 @@ export default function Modal({ setShowModal, children }) {
             e.stopPropagation();
           }}
           id="modal"
-          className="fixed w-3/7 h-3/5 bg-black text-white p-3 rounded-xl"
+          className="fixed w-3/7 h-4/5 bg-black text-white p-3 rounded-xl"
         >
           <button
-            className="p-1 rounded-full hover:bg-slate-600 cursor-pointer fixed bg-slate-900"
+            className="p-1 rounded-full hover:bg-slate-600 cursor-pointer bg-slate-900"
             onClick={() => {
               setShowModal(false);
             }}
