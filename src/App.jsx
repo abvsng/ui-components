@@ -1,22 +1,20 @@
+import { useState } from "react";
 import "./App.css";
-import Accordion from "./components/Accordion";
+import Modal from "./components/Modal";
 
 function App() {
+  const [showModal, setShowModal] = useState(false);
   return (
     <>
-      <Accordion title={"Acc title 1"}>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae
-          repellendus labore aperiam doloribus, enim soluta delectus voluptas
-          corrupti fugiat ratione?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-          assumenda, reprehenderit illo molestias voluptatum accusantium
-          mollitia dolor eaque. Commodi officiis esse consequuntur expedita
-          nostrum iusto ullam inventore veritatis itaque tempora.
-        </p>
-      </Accordion>
+      <button
+        className="bg-black text-white px-4 py-2 hover:bg-slate-800 rounded-full cursor-pointer"
+        onClick={() => {
+          setShowModal((p) => !p);
+        }}
+      >
+        Modal
+      </button>
+      {showModal && <Modal setShowModal={setShowModal}></Modal>}
     </>
   );
 }
