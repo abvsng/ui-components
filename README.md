@@ -28,6 +28,7 @@ export default function App() {
     </div>
   );
 }
+```
 # Modal Component
 
 A reusable and customizable modal component built with React and Tailwind CSS.
@@ -67,3 +68,4 @@ export default function App() {
     </div>
   );
 }
+```
